@@ -13,11 +13,16 @@
   <button type="button" class="btn btn-primary" (click)="populateDropDown()">Let's Begin !!</button>
   </div>
   <div *ngIf="isDropdownLoaded">
-    <select name="employee" id="#">
+    <br>
+    <select (change)="onSelectEmployee($event.target.value)" class="drop-down" name="employee" id="#">
       <option selected="selected" value="one">Select Employee</option>
-      <option *ngFor="let name of employeeName" value="name">
+      <option *ngFor="let name of employeeName" value="{{name}}">
         {{name}}
       </option>
       </select>
+  </div>
+  <br>
+  <div *ngIf="showChart">
+    <app-employee-stats [employeeDataMap] = "employeeDataMap"></app-employee-stats>
   </div>
 </div>

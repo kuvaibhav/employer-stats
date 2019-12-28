@@ -4,3 +4,13 @@
     position: relative;
     top: -1rem;
 }
+
+.drop-down {
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: whitesmoke;
+    border: solid 1px gainsboro;
+    height: 36px;
+    width: 40%;
+    padding: 0 10px;
+  }
