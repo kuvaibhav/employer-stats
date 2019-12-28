@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReadExcelComponent } from './read-excel/read-excel.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReadExcelComponent
   ],
   imports: [
     BrowserModule,
