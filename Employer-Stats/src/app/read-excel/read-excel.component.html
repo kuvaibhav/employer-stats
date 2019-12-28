@@ -1,17 +1,23 @@
-<div class="form-group">
-  <label for="file">Choose File</label>
-  <input type="file"
-         id="file"
-         (change)="handleFile($event)">
-</div>
-<div *ngIf="startProgress">
-<button type="button" class="btn btn-primary" (click)="populateDropDown()">Read File</button>
-</div>
-<div *ngIf="isDropdownLoaded">
-  <select name="employee" id="#">
-    <option selected="selected" value="one">Select Employee</option>
-    <option *ngFor="let name of employeeName" value="name">
-      {{name}}
-    </option>
-    </select>
+<div class="jumbotron">
+  <h1 class="display-4">Hello, There !! <img class="animated-gif" src="../../assets/hello.gif" /></h1>
+  <p class="lead">This is a simple application, which will help you to visualize a employee's performace report on monthly basis</p>
+  <hr class="my-4">
+  <p>All You have to do is upload an excel file (.xlsx extension preferred)</p>
+  <div class="form-group">
+    <label for="file">Choose File</label>
+    <input type="file"
+           id="file"
+           (change)="handleFile($event)">
+  </div>
+  <div *ngIf="startProgress">
+  <button type="button" class="btn btn-primary" (click)="populateDropDown()">Let's Begin !!</button>
+  </div>
+  <div *ngIf="isDropdownLoaded">
+    <select name="employee" id="#">
+      <option selected="selected" value="one">Select Employee</option>
+      <option *ngFor="let name of employeeName" value="name">
+        {{name}}
+      </option>
+      </select>
+  </div>
 </div>
