@@ -5,7 +5,7 @@
          (change)="handleFile($event)">
 </div>
 <div *ngIf="startProgress">
-<button (click)="populateDropDown()">Read File</button>
+<button type="button" class="btn btn-primary" (click)="populateDropDown()">Read File</button>
 </div>
 <div *ngIf="isDropdownLoaded">
   <select name="employee" id="#">

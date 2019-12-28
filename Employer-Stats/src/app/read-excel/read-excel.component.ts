@@ -26,7 +26,7 @@ export class ReadExcelComponent implements OnInit {
     // this.fileToUpload = files.item(0);
     let files = e.target.files, f = files[0];
     let reader = new FileReader();
-    reader.onload = (e) => {
+    reader.onload = (e: any) => {
     let data = new Uint8Array(e.target.result);
     let workbook = XLSX.read(data, {type: 'array'});
     this.workbookData = workbook;
